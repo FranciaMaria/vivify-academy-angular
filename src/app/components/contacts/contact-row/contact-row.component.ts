@@ -13,7 +13,13 @@ export class ContactRowComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() contactRow: Contact;
+ //@Input() contactRow: Contact;
+
+  private contact: Contact;
+
+  @Input() set contactRow(contactFromInput: Contact){
+  	this.contact = contactFromInput;
+  }
 
   @Output() onEdit = new EventEmitter<Contact>();
   @Output() onRemove = new EventEmitter<Contact>();

@@ -16,7 +16,7 @@
    <tr *ngFor="let contact of contacts"
     [contactRow]="contact"
     (onEdit)="contactForm.edit($event)"
-    (onRemove)=""
+    (onRemove)="remove($event)"
     
    ></tr>
 </table>
