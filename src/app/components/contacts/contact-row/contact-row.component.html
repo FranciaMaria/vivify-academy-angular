@@ -1,0 +1,10 @@
+ <td class="align-middle">
+    <a [routerLink]="['/contacts', contactRow.id]">
+         {{ contactRow.firstName }} {{ contactRow.lastName }}
+    </a>
+ </td>
+<td class="align-middle">{{ contactRow.email | uppercase | lowercase }}</td>
+<td>
+    <button class="btn btn-danger btn-sm" (click)="edit(contactRow)">Edit</button>
+    <button class="btn btn-danger btn-sm" (click)="remove(contactRow)">Remove</button>
+</td>

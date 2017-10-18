@@ -1,0 +1,24 @@
+<h1>Contacts</h1>
+
+<app-contact-form #contactForm (onSubmit)="submitContact($event)"></app-contact-form>
+
+
+
+<table class="table table-striped">
+ <thead>
+   <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>Actions</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr *ngFor="let contact of contacts"
+    [contactRow]="contact"
+    (onEdit)="contactForm.edit($event)"
+    (onRemove)=""
+    
+   ></tr>
+</table>
+
+<router-outlet></router-outlet>
